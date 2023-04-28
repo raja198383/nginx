@@ -15,12 +15,10 @@ spec:
     metadata:
       labels:
        app: nginx 
-    spec:
-      imagePullSecrets:
-      - name: imagepull-docker
+    spec:      
       containers:
       - name: nginx-app 
-        image: ramakrishna8254/week:v2
+        image: nginx
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - containerPort: 80
