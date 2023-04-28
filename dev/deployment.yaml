@@ -16,8 +16,11 @@ spec:
       labels:
        app: nginx 
     spec:
+      imagePullSecrets:
+      - name: imagepull-docker
       containers:
       - name: nginx-app 
         image: ramakrishna8254/week:v2
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
